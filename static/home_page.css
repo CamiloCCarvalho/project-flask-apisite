@@ -1,0 +1,161 @@
+/*
+ Colors
+
+ dark - #291720
+ green - #04a777
+ purple_dark - #820263
+ pink - #d90368
+ orange - #f75c03
+
+*/
+.container_body{
+    height: 100%;
+    background: #252525;
+}
+.homepage {
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.namesite {
+    color: #f75c03;
+}
+.rowh {
+    width: 100%;
+}
+.area_content {
+    width: 100%;
+    height: 800px;
+    background: #303030;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+}
+
+.area_options {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3px;
+}
+
+/* COLUNA DA DIREITA ONDE APARECE AS LISTAS */
+.area_api {
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:flex-start;
+    justify-content: flex-start;
+    padding: 6px 12px;
+    background: #353535;
+
+}
+
+.text_content {
+    color: #f0f0f0;
+}
+
+.menu_content_apis {
+    border-bottom: 1px solid silver;
+    width: 98%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* ITEMS DO MENU EM CIMA DAS LISTAS */
+.menu_consult {
+    width: 100%;
+    text-align: center;
+    font: 15px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* COLUNA BRANCA */
+.content_consult {
+    padding-top: 21px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* COLUNA VERMELHA */
+.column_name {
+    border-right: 1px solid silver;
+    width: 100%;
+}
+.list_names {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 6px;
+
+    overflow-x: scroll;
+    overflow-wrap: normal;
+}
+
+/* COLUNA AZUL */
+.column_description {
+    border-right: 1px solid silver;
+    width: 100%;
+    padding-left: 6px;
+}
+.list_descriptions {
+    overflow-x: scroll;
+    overflow-wrap: normal;
+}
+
+/* COLUNA ROXA - LINK */
+.column_link {
+    width: auto;
+    padding-left: 6px;
+}
+.list_links {
+    overflow-x: auto;
+    overflow-wrap: normal;
+}
+.rows_in_table {
+    height:5rem;
+    overflow-x: auto;
+    overflow-wrap: normal;
+    border-bottom: 1px solid orange;
+    width: 97%;
+    padding-left: 3px;
+}
+.text_in_rows {
+    display:flex;
+    flex-flow:column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.link_text {
+    word-break: keep-all;
+}
+
+/* FOOTER PAGE */
+.footer_page {
+    padding: 0 21px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+

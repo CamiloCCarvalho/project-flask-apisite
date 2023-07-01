@@ -2,9 +2,74 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Lista | APIs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ash">
+    <meta
+            name="description"
+            content="Website (SPA) construido para listar e consultar APIs de diversos tipos, construido com Flask e Python, por Ash">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='theme_dark.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home_page.css') }}">
+
+    <title>API List | Consultor</title>
 </head>
+
 <body>
-    <h1>Site by: Ash to consult APIs...</h1>
+    <section class="section container_body">
+
+
+          <h1 class="title namesite">
+            API LIST | Consultor
+          </h1>
+
+          <hr class="rowh">
+
+          <div class="box is-align-self-flex-start area_content">
+              <div class="area_options">
+                  <p class="title">Options</p>
+              </div>
+              <div class="area_api text_content">
+                  <div class="menu_content_apis">
+                      <p class="menu_consult">Name</p>
+                      <p class="menu_consult">Description</p>
+                      <p class="menu_consult">Link</p>
+                  </div>
+                  <div class="content_consult">
+                    <div class="column_name">
+                      <ul class="list_names">
+                          <!-- For Names -->
+                          {% for name in names_api%}
+                          <li class="rows_in_table text_in_rows">{{ name }}</li>
+                          {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="column_description">
+                        <ul class="list_descriptions">
+                            <!-- For Descriptions -->
+                            {% for description in descriptions_api%}
+                            <li class="rows_in_table text_in_rows">{{ description }}</li>
+                            {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="column_link">
+                        <ul class="list_links">
+                            <!-- For Links -->
+                            {% for link in links_api%}
+                            <li class="rows_in_table text_in_rows">
+                                <a>{{ link }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <footer class="footer_page">
+            <p> Developer: <a href="https://github.com/CamiloCCarvalho" target="_blank"> Ash</a></p>
+            <p> Copyright FREE 2023 | Lista de APIs públicas</p>
+            <p> Fonte: <a href="https://api.publicapis.org/entries" target="_blank">link da API utilizada neste projeto</a></p>
+          </footer>
+  </section>
 </body>
 </html>
