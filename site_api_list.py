@@ -1,9 +1,11 @@
-from flask import Flask
+from flask import Flask, url_for
 from flask import render_template as page
 from dependencies import consume_api
 
 # Start Instance
 app = Flask(__name__)
+app.add_url_rule('/favicon.ico',
+                 redirect_to=url_for('static', filename='favicon.ico'))
 
 
 # routes
