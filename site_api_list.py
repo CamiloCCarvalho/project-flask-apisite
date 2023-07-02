@@ -4,13 +4,14 @@ from dependencies import consume_api
 
 # Start Instance
 app = Flask(__name__)
-app.add_url_rule('/favicon.ico',
-                 redirect_to=url_for('static', filename='favicon.ico'))
+with app.app_context():
+    app.add_url_rule('/favicon.ico', redirect_to=url_for('static', filename='favicon.ico'))
 
 
 # routes
 @app.route(r'/')
 def home_page():
+
     datas: dict = consume_api.get_api_data()
     count: int = datas['count']
     list_apis: list = datas['entries']
@@ -26,11 +27,6 @@ def home_page():
                 names_api=names_api,
                 links_api=links_api,
                 descriptions_api=descriptions_api)
-
-
-@app.route(r'/users/<user_name>')
-def user_page(user_name):
-    return page('user_page.html', name=user_name)
 
 
 # Run site
