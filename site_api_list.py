@@ -4,6 +4,8 @@ from dependencies import consume_api
 
 # Start Instance
 app = Flask(__name__)
+app.config['SERVER_NAME'] = 'ash-apilist.onrender.com'
+
 with app.app_context():
     app.add_url_rule('/favicon.ico', redirect_to=url_for('static', filename='favicon.ico'))
 
