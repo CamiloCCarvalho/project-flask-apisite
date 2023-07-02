@@ -20,12 +20,24 @@
     justify-content: flex-start;
     align-items: center;
 }
+.header_content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 24px;
+}
 .namesite {
-    color: #f75c03;
+    color: orange;
 }
 .rowh {
     width: 100%;
+    border: none;
+    height: 1px;
+    background: orange;
+    border-radius: 5px;
 }
+
+/* BOX LARGEST */
 .area_content {
     width: 100%;
     height: 800px;
@@ -33,9 +45,10 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-
+    box-shadow: -9px 3px  20px #202020;
 }
 
+/* BOX LEFT */
 .area_options {
     width: 40%;
     height: 100%;
@@ -45,8 +58,11 @@
     justify-content: flex-start;
     padding: 3px;
 }
+.total_apis {
+    margin: 9px;
+}
 
-/* COLUNA DA DIREITA ONDE APARECE AS LISTAS */
+/* BOX RIGHT */
 .area_api {
     border-radius: 10px;
     width: 80%;
@@ -55,17 +71,14 @@
     flex-flow: column nowrap;
     align-items:flex-start;
     justify-content: flex-start;
-    padding: 6px 12px;
+    padding: 12px;
     background: #353535;
-
-}
-
-.text_content {
+    box-shadow: -9px 3px  20px #202020;
     color: #f0f0f0;
 }
 
+/* MENU CONTENT APIS */
 .menu_content_apis {
-    border-bottom: 1px solid silver;
     width: 98%;
     display: flex;
     flex-flow: row nowrap;
@@ -73,7 +86,7 @@
     justify-content: space-around;
 }
 
-/* ITEMS DO MENU EM CIMA DAS LISTAS */
+/* ITEMS MENU */
 .menu_consult {
     width: 100%;
     text-align: center;
@@ -81,8 +94,17 @@
     font-weight: bold;
     margin-bottom: 3px;
 }
+.menu_name {
+    width: 70%;
+}
+.menu_description {
+    width: 100%;
+}
+.menu_link {
+    width: 100%;
+}
 
-/* COLUNA BRANCA */
+/* COLUMN BOTTOM MENU */
 .content_consult {
     padding-top: 21px;
     width: 100%;
@@ -92,61 +114,93 @@
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 9px;
 }
 
-/* COLUNA VERMELHA */
+/* COLUMN NAMES */
 .column_name {
-    border-right: 1px solid silver;
     width: 100%;
+    border-radius: 6px;
 }
 .list_names {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 6px;
     padding-left: 6px;
-
     overflow-x: scroll;
     overflow-wrap: normal;
+
 }
 
-/* COLUNA AZUL */
+/* COLUMN DESCRIPTIONS */
 .column_description {
-    border-right: 1px solid silver;
     width: 100%;
     padding-left: 6px;
+    border-radius: 6px;
 }
 .list_descriptions {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
     overflow-x: scroll;
     overflow-wrap: normal;
+    font-size: 0.95rem;
 }
 
-/* COLUNA ROXA - LINK */
+/* COLUMN LINKS */
 .column_link {
     width: auto;
     padding-left: 6px;
 }
 .list_links {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
     overflow-x: auto;
     overflow-wrap: normal;
 }
+.link_text {
+    word-break: keep-all;
+}
+.link_href {
+    color: #17cddc;
+    font-size: 0.95rem;
+}
+.link_href:hover {
+    color: #1BE1FF;
+}
+
 .rows_in_table {
     height:5rem;
     overflow-x: auto;
     overflow-wrap: normal;
-    border-bottom: 1px solid orange;
-    width: 97%;
-    padding-left: 3px;
+    width: 100%;
 }
+
 .text_in_rows {
     display:flex;
     flex-flow:column nowrap;
     align-items: flex-start;
     justify-content: center;
 }
-.link_text {
-    word-break: keep-all;
+.text_content_api {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 12px;
+    background: #303030;
+    padding: 9px;
 }
+
 
 /* FOOTER PAGE */
 .footer_page {
@@ -155,6 +209,9 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+}
+.font_data {
+    font-style: italic;
 }
 
 

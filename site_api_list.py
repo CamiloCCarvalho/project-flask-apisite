@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template as page
 from dependencies import consume_api
+
 # Start Instance
 app = Flask(__name__)
 

@@ -12,35 +12,40 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='theme_dark.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home_page.css') }}">
 
-    <title>API List | Consultor</title>
+    <title>API List Consultor</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 
 <body>
     <section class="section container_body">
-
-
-          <h1 class="title namesite">
-            API LIST | Consultor
-          </h1>
+          <!-- Header Page -->
+          <header class="header_content">
+              <img width="100" height="100" src="https://img.icons8.com/clouds/100/api.png" alt="api"/>
+              <h1 class="title namesite">
+                List Consultor
+              </h1>
+          </header>
 
           <hr class="rowh">
-
+          <!-- Content Section Page -->
           <div class="box is-align-self-flex-start area_content">
               <div class="area_options">
-                  <p class="title">Total APIs: {{count}}</p>
+                  <p class="title total_apis">Total APIs: {{count}}</p>
               </div>
-              <div class="area_api text_content">
+              <div class="area_api">
                   <div class="menu_content_apis">
-                      <p class="menu_consult">Name</p>
-                      <p class="menu_consult">Description</p>
-                      <p class="menu_consult">Link</p>
+                      <p class="menu_consult menu_name">Name</p>
+                      <p class="menu_consult menu_description">Description</p>
+                      <p class="menu_consult menu_link">Link</p>
                   </div>
                   <div class="content_consult">
                     <div class="column_name">
                       <ul class="list_names">
                           <!-- For Names -->
                           {% for name in names_api%}
-                          <li class="rows_in_table text_in_rows">{{ name }}</li>
+                          <li class="rows_in_table text_in_rows">
+                              <p class="text_content_api">{{ name }}</p>
+                          </li>
                           {% endfor %}
                       </ul>
                     </div>
@@ -48,7 +53,9 @@
                         <ul class="list_descriptions">
                             <!-- For Descriptions -->
                             {% for description in descriptions_api%}
-                            <li class="rows_in_table text_in_rows">{{ description }}</li>
+                            <li class="rows_in_table text_in_rows">
+                                <p class="text_content_api">{{ description }}</p>
+                            </li>
                             {% endfor %}
                       </ul>
                     </div>
@@ -57,7 +64,11 @@
                             <!-- For Links -->
                             {% for link in links_api%}
                             <li class="rows_in_table text_in_rows">
-                                <a href="{{ link }}" target="_blank">{{ link }}</a>
+                                <a class="link_href text_content_api"
+                                   href="{{ link }}"
+                                   target="_blank">
+                                    {{ link }}
+                                </a>
                             </li>
                             {% endfor %}
                         </ul>
@@ -66,9 +77,18 @@
               </div>
           </div>
           <footer class="footer_page">
-            <p> Developer: <a href="https://github.com/CamiloCCarvalho" target="_blank"> Ash</a></p>
-            <p> Copyright FREE 2023 | Lista de APIs públicas</p>
-            <p> Fonte: <a href="https://api.publicapis.org/entries" target="_blank">link da API utilizada neste projeto</a></p>
+              <!-- Developer -->
+            <a class="link_href font_data" href="https://github.com/CamiloCCarvalho" target="_blank">Developer Ash</a>
+
+              <!-- License -->
+              <a class="link_href font_data" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                  Copyright Free
+                  <img alt="Licença Creative Commons" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+                  Attr 4.0 International
+              </a>
+
+              <!-- Data Font -->
+            <a class="link_href font_data" href="https://api.publicapis.org/entries" target="_blank">Fonte utilizada.</a>
           </footer>
   </section>
 </body>
