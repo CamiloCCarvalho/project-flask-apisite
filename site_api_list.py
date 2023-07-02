@@ -1,4 +1,4 @@
-from flask import Flask, url_for
+from flask import Flask, url_for, redirect
 from flask import render_template as page
 from dependencies import consume_api
 
@@ -6,8 +6,10 @@ from dependencies import consume_api
 app = Flask(__name__)
 app.config['SERVER_NAME'] = 'ash-apilist.onrender.com'
 
-with app.app_context():
-    app.add_url_rule('/favicon.ico', redirect_to=url_for('static', filename='favicon.ico'))
+
+@app.route('/favicon.ico')
+def favicon():
+    return redirect(url_for('static', filename='favicon.ico'))
 
 
 # routes
