@@ -4,7 +4,7 @@ from dependencies import consume_api
 
 # Start Instance
 app = Flask(__name__)
-# app.config['SERVER_NAME'] = 'ash-apilist.onrender.com'
+app.config['SERVER_NAME'] = 'ash-apilist.onrender.com'
 
 
 @app.route('/favicon.ico')
@@ -23,6 +23,7 @@ def home_page():
     names_api = []
     links_api = []
     descriptions_api = []
+
     for api in list_api_sorted:
         names_api.append(api['API'])
         links_api.append(api['Link'])
