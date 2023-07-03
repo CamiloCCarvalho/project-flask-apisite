@@ -17,4 +17,6 @@ def get_api_data():
         print(response.text)
 
 
-get_api_data()
+datas = get_api_data()
+print(type(datas['entries'][0]['API']))
+

@@ -95,13 +95,13 @@
     margin-bottom: 3px;
 }
 .menu_name {
-    width: 70%;
+    width: 30%;
 }
 .menu_description {
     width: 100%;
 }
 .menu_link {
-    width: 100%;
+    width: 20%;
 }
 
 /* COLUMN BOTTOM MENU */
@@ -119,6 +119,7 @@
 
 /* COLUMN NAMES */
 .column_name {
+    max-width: 180px;
     width: 100%;
     border-radius: 6px;
 }
@@ -181,6 +182,7 @@
     overflow-x: auto;
     overflow-wrap: normal;
     width: 100%;
+
 }
 
 .text_in_rows {
@@ -188,8 +190,10 @@
     flex-flow:column nowrap;
     align-items: flex-start;
     justify-content: center;
+
 }
 .text_content_api {
+    min-width: 120px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -199,6 +203,8 @@
     border-radius: 12px;
     background: #303030;
     padding: 9px;
+    border-bottom: 1px solid #282828;
+    border-left: 1px solid #282828;
 }
 
 
