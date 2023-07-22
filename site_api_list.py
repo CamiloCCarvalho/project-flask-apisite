@@ -7,12 +7,12 @@ app = Flask(__name__)
 app.config['SERVER_NAME'] = 'ash-apilist.onrender.com'
 
 
+# routes
 @app.route('/favicon.ico')
 def favicon():
     return redirect(url_for('static', filename='favicon.ico'))
 
 
-# routes
 @app.route(r'/')
 def home_page():
 

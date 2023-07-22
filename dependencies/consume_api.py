@@ -1,7 +1,7 @@
 import requests
 
 
-def get_api_data():
+def get_api_data() -> dict:
     url: str = f'https://api.publicapis.org/entries'
     response = requests.get(url)
 
@@ -15,8 +15,4 @@ def get_api_data():
     else:
         print(f"A solicitação retornou um erro: {response.status_code}")
         print(response.text)
-
-
-datas = get_api_data()
-print(type(datas['entries'][0]['API']))
 
